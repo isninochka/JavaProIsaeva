@@ -2,21 +2,12 @@ package de.telran.homeWorks.homeWork10_11_23.exercise_1;
 
 public class Human extends Earthman {
 
-    private String name = "Nina";
+    protected static String name = "Нина";
+    protected static String education = "университет";
 
 
-    protected Human(String name){
-      super(false, "Russia", 38);
-      this.name = name;
+  public static void beingHuman(){
+      System.out.println("Теперь я человек разумный и у меня есть имя "+ name + " я закончил(а) "+ education);
   }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
 
 }

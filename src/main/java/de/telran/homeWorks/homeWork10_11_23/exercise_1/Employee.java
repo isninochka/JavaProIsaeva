@@ -1,11 +1,12 @@
 package de.telran.homeWorks.homeWork10_11_23.exercise_1;
 
 public class Employee extends Human {
-    protected String education = "University";
-    protected Employee(){
-        super("Nina");
-        this.education = education;
+
+    protected static String job = "Мерседес";
+    public static void beingEmployee(){
+        System.out.println("Я образованный человек и начинаю свою карьеру в "+ job + " , теперь я работник");
     }
+
 
 
 
