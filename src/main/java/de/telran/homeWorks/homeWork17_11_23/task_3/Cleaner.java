@@ -1,7 +1,11 @@
 package de.telran.homeWorks.homeWork17_11_23.task_3;
 
 public interface Cleaner {
-    void cleansTable();
-    void washesDishes();
+    default void cleanTable(){
+        System.out.println("Можно уже убрать со стола?");
+    }
+    default void washesDishes(){
+        System.out.println("Я сейчас мою посуду");
+    }
 
 }
