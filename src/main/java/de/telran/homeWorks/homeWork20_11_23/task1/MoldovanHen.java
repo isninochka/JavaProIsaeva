@@ -1,11 +1,10 @@
-package de.telran.homeWorks.HomeWork20_11_23.task1;
+package de.telran.homeWorks.homeWork20_11_23.task1;
 
-class UkrainianHen extends Hen {
-
+public class MoldovanHen extends Hen{
     int eggsCount;
-    final String henCountry = "Украина";
+    final String henCountry = "Молдова";
 
-    public UkrainianHen(int eggsCount) {
+    public MoldovanHen(int eggsCount) {
         this.eggsCount = eggsCount;
     }
 
@@ -16,12 +15,12 @@ class UkrainianHen extends Hen {
 
 
     public String getDiscription() {
-       return  "Моя страна " + henCountry + ". Я несу "+ eggsCount + "яиц в месяц.";
+        return "Моя страна " + henCountry + ". Я несу "+ eggsCount + " яиц в месяц.";
     }
 
     @Override
     public String toString() {
-        return "UkrainianHen{" +
+        return "MoldovanHen{" +
                 "eggsCount=" + eggsCount +
                 ", henCountry='" + henCountry + '\'' +
                 "} " + super.toString();

@@ -1,4 +1,4 @@
-package de.telran.homeWorks.HomeWork20_11_23.task1;
+package de.telran.homeWorks.homeWork20_11_23.task1;
 
 public class BelarusianHen extends Hen{
     int eggsCount;

@@ -1,6 +1,4 @@
-package de.telran.homeWorks.HomeWork20_11_23.task1;
-
-import java.util.Scanner;
+package de.telran.homeWorks.homeWork20_11_23.task1;
 
 public class HenFactory {
 

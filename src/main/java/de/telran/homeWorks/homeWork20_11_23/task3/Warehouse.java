@@ -1,4 +1,4 @@
-package de.telran.homeWorks.HomeWork20_11_23.task3;
+package de.telran.homeWorks.homeWork20_11_23.task3;
 
 public class Warehouse implements Assembler, Keeper, Loader  {
 

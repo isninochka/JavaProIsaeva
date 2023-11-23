@@ -1,4 +1,4 @@
-package de.telran.homeWorks.HomeWork20_11_23.task2;
+package de.telran.homeWorks.homeWork20_11_23.task2;
 
 public class SquarePizza {
     private final int width;
