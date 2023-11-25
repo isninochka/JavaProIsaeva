@@ -6,7 +6,6 @@ public class CoffeeMashine {
     }
 
     public static CoffeeMashine getCoffeeMashine(String coffeeType){
-        System.out.println("Вы готовите "+coffeeType+" в нашей уникальной кофе-машине");
         return COFFE_MASHINE;
     }
 
