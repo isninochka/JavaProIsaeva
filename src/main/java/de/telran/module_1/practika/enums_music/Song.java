@@ -1,4 +1,4 @@
-package de.telran.module_1.lessons.lesson3.practika.enums_music;
+package de.telran.module_1.practika.enums_music;
 
 public class Song {
     String title;

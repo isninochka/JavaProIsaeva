@@ -1,4 +1,4 @@
-package de.telran.module_1.lessons.lesson3.practika.game;
+package de.telran.module_1.practika.game;
 
 public abstract class Hero {
 
