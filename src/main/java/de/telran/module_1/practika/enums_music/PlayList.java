@@ -3,6 +3,7 @@ package de.telran.module_1.practika.enums_music;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class PlayList {
     String name;
     List<Song> songs;

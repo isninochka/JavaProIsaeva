@@ -1,19 +1,23 @@
 package de.telran.homeWorks.homeWork24_11_23.task1;
 
+import lombok.Getter;
+
 public class WayCalculation  {
 
+    @Getter
     private static double costToWay;
     private static double timeToWay;
 
     double wayKm;
     String transport;
 
-    public WayCalculation(double wayKm, String transport) {
+    public WayCalculation(double wayKm) {
         this.wayKm = wayKm;
-        this.transport = transport;
+
     }
 
-    public double costCalc(){
+
+    public double costCalc(String transport){
 
 
         switch (transport) {
@@ -37,7 +41,9 @@ public class WayCalculation  {
         }
         return costToWay;
     }
-    public double timeCalc(){
+
+
+    public double timeCalc(String transport){
 
         switch (transport) {
             case "Plane" -> {
