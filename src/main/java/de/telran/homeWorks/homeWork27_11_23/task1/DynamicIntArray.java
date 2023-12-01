@@ -1,4 +1,4 @@
-package de.telran.homeWorks.homeWorkk27_11_23.task1;
+package de.telran.homeWorks.homeWork27_11_23.task1;
 
 import java.util.Arrays;
 
