@@ -56,6 +56,7 @@ public class SimpleHashSet {
         catsList.add(new Cat("Rich", "MeinCoon",7));
         catsList.add(new Cat("Dasha", "Mix",3));
         System.out.println(catsList);
+
         Iterator<Cat>iterator = catsList.iterator();
         while (iterator.hasNext()){
             System.out.println(iterator.next());
