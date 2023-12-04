@@ -1,10 +1,10 @@
 package de.telran.homeWorks.homeWork24_11_23.task1;
 
-import lombok.Getter;
+
 
 public class WayCalculation  {
 
-    @Getter
+
     private static double costToWay;
     private static double timeToWay;
 
