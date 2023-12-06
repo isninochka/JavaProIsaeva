@@ -1,11 +1,14 @@
 package de.telran.module_2.lesson4Data;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Cat {
+public class Cat implements Comparable<Cat> {
     private String name;
     private String breed;
     private int age;
+
+
 
     @Override
     public boolean equals(Object o) {
@@ -60,5 +63,21 @@ public class Cat {
                 ", breed='" + breed + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(Cat cat) {
+        if(this.age<cat.age)
+            return -1;
+        else if (this.age> cat.age)
+            return 1;
+        else {
+            int res = this.name.compareTo(cat.name);
+            if(res ==0);
+            return this.breed.compareTo(cat.breed);
+        }
+
+
     }
 }
