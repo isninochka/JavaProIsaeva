@@ -2,7 +2,7 @@ package de.telran.module_2.Lesson_Queue_Stack_ArrayDeque;
 
 import lombok.*;
 
-import java.util.Collections;
+
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
