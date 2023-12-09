@@ -39,6 +39,7 @@ public class PetrolStation {
         carsQueue.add(new Transport(TypeOfTransport.CAR,Petrol.SUPER_95,"LIP788"));
         carsQueue.add(new Transport(TypeOfTransport.POLICE,Petrol.ULTRA_98,"KÖ222"));
         carsQueue.add(new Transport(TypeOfTransport.BUS,Petrol.DIESEL,"HM009"));
+
         System.out.println(carsQueue);
 
         // Приоритет час пик и автобусы, в отсутствии скорой
