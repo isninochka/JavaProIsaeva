@@ -9,7 +9,7 @@ public class Task3_IsValueSame {
         String[] numbers2 = {"Two","Four","Five","Tree","One"};
 
         if(Arrays.equals(numbers1,numbers2)){
-                System.out.println("Not Same");
-            } else System.out.println("Same");
+                System.out.println("Same");
+            } else System.out.println("Not Same");
     }
 }
