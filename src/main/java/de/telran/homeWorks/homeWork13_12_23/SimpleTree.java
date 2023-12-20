@@ -29,6 +29,8 @@ public class SimpleTree {
         Util.depthPreorder(root);
         System.out.println();
 
+        binaryTree.findByValue("Node2");
+
 }
 
 }

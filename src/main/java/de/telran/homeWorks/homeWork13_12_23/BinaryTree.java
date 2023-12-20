@@ -1,6 +1,7 @@
 package de.telran.homeWorks.homeWork13_12_23;
 
 import java.util.Stack;
+import java.util.function.Function;
 import java.util.stream.IntStream;
 
 public class BinaryTree {
@@ -109,21 +110,23 @@ public class BinaryTree {
     }
 
 
-    public String findByValue(String value) {
+    public Node findByValue(String value) {
         Node current = root;
+        Function<String, Integer> valueConverter = x->Integer.valueOf(value);
+       int x = valueConverter.apply(value);
+       int rootEl = valueConverter.apply(root.getValue());
 
-        while (!root.getValue().equals(value)) {
-            int key = 0;
-
-            if (key < root.getKey()) {
+        while (rootEl != x) {
+            if(x<rootEl){
                 root = root.getLeft();
-            } else {
+        } else {
                 root = root.getRight();
-            }
-            if ((root == null))
+        } if(root == null){
                 return null;
+            }
+
         }
-        return root.getValue();
+        return root;
     }
 }
 
