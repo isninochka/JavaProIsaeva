@@ -1,9 +1,7 @@
 package de.telran.homeWorks.homeWork20_12_23.task4;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Office {
     public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class Office {
         employeeList.add(new Employee("Ivanov","Ivan","Ivanovich",
                 "Soft engineer","IT Department",7700));
         employeeList.add(new Employee("Smirnova","Elena","Vladimirovna",
-                "Economist","Finance Department",3500));
+                "Accountant","Finance Department",3500));
         employeeList.add(new Employee("Kusnetzov","Andrey","Sergeevich",
                 "Programmer","IT Department",6500));
         employeeList.add(new Employee("Popova","Anastasia","Viktorovna",
@@ -21,7 +19,7 @@ public class Office {
         employeeList.add(new Employee("Vasiliev","Dmitriy","Sergeevich",
                 "Finance Manager","Management",7500));
         employeeList.add(new Employee("Sokolov","Sergey","Vladimirovich",
-                "System administrator","IT Department",5300));
+                "Programmer","IT Department",5300));
         employeeList.add(new Employee("Mihailova","Alexandra","Olegovna",
                 "Web Designer","IT Department",3000));
         employeeList.add(new Employee("Novikov","Kirill","Andreevich",
@@ -68,6 +66,43 @@ public class Office {
                 .max(Comparator.comparingDouble(Employee::getSalary));
         System.out.println("Сотрудник с самой высокой заработной платой -> "+ maxSalary);
 
+        System.out.println("Задание6. Получите сотрудников из всех отделов с максимальной зп ");
+        List<Optional<Employee>> bigestSalaries = new ArrayList<>();
+
+        Optional<Employee> bigestSalaryFromIT = employeeList.stream()
+                .filter(e -> e.getDepartment().equals("IT Department") )
+                .max(Comparator.comparingDouble(Employee::getSalary));
+        bigestSalaries.add(bigestSalaryFromIT);
+
+        Optional<Employee> bigestSalaryFromFinance = employeeList.stream()
+                .filter(e -> e.getDepartment().equals("Finance Department") )
+                .max(Comparator.comparingDouble(Employee::getSalary));
+        bigestSalaries.add(bigestSalaryFromFinance);
+
+        Optional<Employee> bigestSalaryFromHR = employeeList.stream()
+                .filter(e -> e.getDepartment().equals("HR Department") )
+                .max(Comparator.comparingDouble(Employee::getSalary));
+        bigestSalaries.add(bigestSalaryFromHR);
+
+        Optional<Employee> bigestSalaryFromManagement = employeeList.stream()
+                .filter(e -> e.getDepartment().equals("Management") )
+                .max(Comparator.comparingDouble(Employee::getSalary));
+        bigestSalaries.add(bigestSalaryFromManagement);
+
+        System.out.println("Список сотрудников с самой большой заработной платой из каждого отдела :");
+        bigestSalaries.stream()
+                .forEach(System.out::println);
+
+        System.out.println("Задание7. Сгруппировать сотрудников по должности ");
+        Map<String, List<Employee>> grupping = employeeList.stream()
+                .collect(Collectors.groupingBy(Employee::getPosition));
+
+        System.out.println("Сотрудники, сгруппированные по должности: ");
+       grupping.forEach((department, employee)->System.out.println(department+" "+employee));
+
+
+        }
+
 
 
 
@@ -77,4 +112,4 @@ public class Office {
 
 
     }
-}
+
