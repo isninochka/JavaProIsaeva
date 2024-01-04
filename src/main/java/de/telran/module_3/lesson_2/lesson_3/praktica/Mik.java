@@ -1,5 +1,8 @@
 package de.telran.module_3.lesson_2.lesson_3.praktica;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -9,11 +12,6 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 
-//        Задача 9: Подсчет суммы значений объектов.
-//        List<Person> task9Input = Arrays.asList(
-//        new Person("Alice", 25),
-//        new Person("Bob", 30),
-//        new Person("Charlie", 35));
 public class Mik {
     public static void main(String[] args) {
         List<String>list = List.of("Mama","Mila","Ramu");
@@ -67,6 +65,18 @@ public class Mik {
         System.out.println(s);
 
 
+//        Задача 9: Подсчет суммы значений объектов.
+        List<Person> task9Input = Arrays.asList(
+        new Person("Alice", 25),
+        new Person("Bob", 30),
+        new Person("Charlie", 35));
+        System.out.println(task9Input.stream()
+                .mapToInt(person -> person.getAge())
+                .sum()
+        );
+
+
+
         // Задача 10: Группировка слов по длине
 //        Map<Integer, List<String>> wordsByLength = words.stream()
 //                .collect(Collectors.groupingBy(String::length));
@@ -78,4 +88,11 @@ public class Mik {
 
 
     }
+}
+@AllArgsConstructor
+@Getter
+class Person{
+    private String name;
+    private int age;
+
 }
