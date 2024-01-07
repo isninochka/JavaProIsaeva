@@ -5,9 +5,8 @@ import lombok.ToString;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Taski1_9 {
+public class TaskiPlakuchiyNewYear {
 
     public static void main(String[] args) {
 
@@ -69,6 +68,46 @@ public class Taski1_9 {
         System.out.println("Задание 8: "+sumNumbers);
 
         //Задание 9:Получение списка слов, содержащих только уникальные символы, из списка строк
+
+        List<String> words3 = Arrays.asList("apple", "banana", "cherry", "date");
+        List<String> uniqSimbols = words3.stream()
+                .map(w-> w.split(""))
+                .flatMap(Arrays::stream)
+                .distinct()
+                .toList();
+        System.out.println("Задача 9: "+uniqSimbols);
+
+        System.out.println("Stream 2 _______________");
+        //     * List<Integer> numbers = Arrays.asList(1.txt, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+//     * -- Отфильтровать нв четные и не четные
+//     * -- Просуммировать все числа
+//     * -- Получить среднее значение
+//     * -- Найти суммы чисел кратных 3 и 5
+        System.out.println("Задача 1");
+        List<Integer> numbersList = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+        Map<Boolean, List<Integer>> evenOddPartition = numbersList.stream()
+                .collect(Collectors.partitioningBy(num -> num % 2 == 0));
+
+        System.out.println("Четные числа: " + evenOddPartition.get(true));
+        System.out.println("Нечетные числа: " + evenOddPartition.get(false));
+
+        Optional<Integer> sum = numbersList.stream()
+                .reduce(Integer::sum);
+        System.out.println("Сумма всех чисел: "+sum);
+
+        OptionalDouble average = numbersList.stream()
+                .mapToInt(n->n)
+                .average();
+        System.out.println("Среднее арифметическое: "+ average);
+
+        Optional<Integer> sumNumbersList = numbersList.stream()
+                .filter(n->n%3==0 || n%5==0)
+                .reduce(Integer::sum);
+        System.out.println("Сумма чисел кратных 3 и 5: "+sumNumbersList);
+
+        System.out.println("Задача 2");
+
 
 
 
