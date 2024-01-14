@@ -8,14 +8,13 @@ public class praktika {
     public static void main(String[] args) throws IOException {
 
         File testFile = new File("testFile.txt");
-        if(!testFile.exists())
+        if (!testFile.exists())
             testFile.createNewFile();
 
         FileOutputStream stream = new FileOutputStream(testFile);
         stream.write("Программист это человек, преобразующий кофе в код".getBytes());
 
-    readWrite("testFile.txt");
-
+        revers("testFile.txt");
 
 
     }
@@ -26,15 +25,35 @@ public class praktika {
             File file = new File(path);
             BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             while (bufferedReader.ready()) {
-                System.out.println(bufferedReader.readLine());
-                String string = bufferedReader.toString();
 
+                String string = bufferedReader.readLine();
                 FileOutputStream newFile = new FileOutputStream("newFile");
-                for (int i = 0; i < string.length(); i++) {
-                    newFile.write(string.toUpperCase().charAt(i));
-                }
+                newFile.write(string.toUpperCase().getBytes());
+
                 System.out.println("New file is ready");
-                            }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+
+        } catch (IOException e) {
+            e.fillInStackTrace();
+        }
+    }
+
+    public static void revers(String path) {
+
+        try {
+            File file = new File(path);
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
+            while (bufferedReader.ready()) {
+
+                String string = bufferedReader.readLine();
+                FileOutputStream newFile = new FileOutputStream("newFile");
+                newFile.write(string.getBytes().length);
+
+
+                System.out.println("New file is ready");
+            }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
 
@@ -42,7 +61,9 @@ public class praktika {
             e.fillInStackTrace();
         }
 
+
     }
+}
 
     //        try (BufferedReader reader = new BufferedReader(new FileReader(path))){
 //            reader.lines()
@@ -82,7 +103,7 @@ public class praktika {
 //
 //    }
 
-}
+
 //    Написать программу на Java, которая читает текст из
 //.txt файла, преобразует каждую букву в верхний регистр и
 //    записывает результат в новый .txt файл.
