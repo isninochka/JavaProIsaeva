@@ -20,7 +20,7 @@ public class EmailControl {
         String regexPassword = "(?=.*[!@#$%^&*_+-=])(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{8,}";
         String actualPassword = "Y$%12345678yxcv";
         System.out.println(Pattern.matches(regexPassword, actualPassword));
-        //
+
 
 
     }
