@@ -2,7 +2,7 @@ package de.telran.homeWorks.year2024.homeWork15_01_24;
 
 import java.util.regex.Pattern;
 
-public class EmailControl {
+public class RegexControl {
     public static void main(String[] args) {
         //  1. Написать регулярное выражение для проверки email (например my_25@domen-38.de).
 
