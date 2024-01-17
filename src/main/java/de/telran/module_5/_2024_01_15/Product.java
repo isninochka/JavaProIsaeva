@@ -21,22 +21,30 @@ import lombok.*;
 @NoArgsConstructor
 public class Product {
     private int id;
-    private Category category;
+    private Category [] category;
     private String name;
-    private Factor factor;
+    private Factor [] factor;
     private int quantity;
     private boolean isPacked;
     private boolean isAdv;
-    private float price;
+    private double price;
     private double margin;
     private boolean isDebt;
+
+
+
 }
 
 enum Category {
     FOOD,
     DRINKS,
-    SNACKS,
+    SNACKS;
 
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
 
 enum Factor {
