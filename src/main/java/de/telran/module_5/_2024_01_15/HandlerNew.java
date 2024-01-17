@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public class HandlerNew {
     public static void main(String[] args) {
@@ -18,7 +19,7 @@ public class HandlerNew {
 
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
-                //System.out.println(line);
+                System.out.println(line);
                 line = line.substring(1, line.length() - 1);
                 String regex = "\\[(CATEGORY)\\[(\\w+)#(\\d+)\\[(\\w+)#(\\d+)\\[(\\w+)#(\\d+)\\[(\\d+)#(\\d+)" +
                      "\\[(\\w+)#(\\d+)\\[(\\w+)#(\\d+)\\[(\\d+\\.\\d+)#(\\d+)\\((\\d+\\.\\d+)#(\\d)\\[(\\w+)#(\\d+)";
@@ -49,6 +50,11 @@ public class HandlerNew {
             } catch (FileNotFoundException ex) {
             throw new RuntimeException(ex);
         }
+
+        List<Integer> listId = products.stream()
+                .map(Product::getId)
+                .collect(Collectors.toList());
+        System.out.println(listId);
 
     }
   }
