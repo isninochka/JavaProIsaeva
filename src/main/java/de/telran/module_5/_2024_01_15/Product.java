@@ -21,9 +21,9 @@ import lombok.*;
 @NoArgsConstructor
 public class Product {
     private int id;
-    private Category [] category;
+    private Category category;
     private String name;
-    private Factor [] factor;
+    private String factory;
     private int quantity;
     private boolean isPacked;
     private boolean isAdv;
@@ -32,50 +32,74 @@ public class Product {
     private boolean isDebt;
 
 
-
 }
 
 enum Category {
     FOOD,
     DRINKS,
     SNACKS;
+    Category() {
 
-
-    @Override
-    public String toString() {
-        return super.toString();
     }
-}
-
-enum Factor {
-    BARILLA,
-    COCA_COLA,
-    LAYS,
-    NESTLE,
-    LIPTON,
-    PLANTERS,
-    DE_CECCO,
-    TROPICANA,
-    DORITOS,
-    NATURES_WAY,
-    PEPSI,
-    NATURE_VALLEY,
-    WONDER,
-    STARBUCKS,
-    RITZ,
-    UNCLE_BENS,
-    AQUAFINAL,
-    ORVILLE_REDENBACHERS,
-    DAYRYLAND,
-    PRINGLES,
-    KELLOGGS,
-    OREO,
-    KRAFT,
-    CHOBANI,
-    RED_BULL,
-    SNYDERS_OF_HANOVER
-
 
 
 
 }
+// хотела фабрики тоже сделать энум и даже нашла метод как считывать данные,
+// но потом увидела, что их очень много и сделала стринг
+//enum Factor {
+//    BARILLA ("Barilla"),
+//    COCA_COLA ("Coca-Cola"),
+//    LAYS ("Lays"),
+//    NESTLE ("Nestle"),
+//    LIPTON ("Lipton"),
+//    PLANTERS ("Planters"),
+//    DE_CECCO ("De Cecco"),
+//    TROPICANA ("Tropicana"),
+//    DORITOS ("Doritos"),
+//    NATURES_WAY ("Nature's Way"),
+//    PEPSI ("Pepsi"),
+//    NATURE_VALLEY ("Nature Valley"),
+//    WONDER ("Wonder"),
+//    STARBUCKS ("Starbucks"),
+//    RITZ ("Ritz"),
+//    UNCLE_BENS ("Uncle Ben's"),
+//    AQUAFINA ("Aquafina"),
+//    ORVILLE_REDENBACHERS ("Orville Redenbacher's"),
+//    DAYRYLAND ("Dairyland"),
+//    PRINGLES ("Pringles"),
+//    KELLOGGS ("Kellogg's"),
+//    OREO ("Oreo"),
+//    KRAFT ("Kraft"),
+//    CHOBANI ("Chobani"),
+//    RED_BULL ("Red Bull"),
+//    SNYDERS_OF_HANOVER ("Snyder's of Hanover"),
+//    QUAKER ("Quaker"),
+//    MC_DONALDS ("McDonald's"),
+//    SMART_FOOD ("Smartfood"),
+//    JIF ("Jif"),
+//    MINUTE_MAID ("Minute Maid"),
+//    JACK_LINKS ("Jack Link's"),
+//    CAMPBELLS("Campbell's"),
+//
+//    ;
+//
+//private String factory;
+//
+//Factor (String factory){
+//    this.factory = factory;
+//}
+//
+//Factor(){
+//}
+//static String byNameIgnoreCase(String string){
+//    return Arrays.stream(values()).filter(f->f.name().equalsIgnoreCase(string)).toString();
+//}
+//
+//public String getFactory(){
+//    return factory;
+//}
+//    public void setFactor(String factor) {
+//    }
+
+
