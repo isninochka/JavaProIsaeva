@@ -182,8 +182,9 @@ public class Handler {
         List<Product> promoFood = new ArrayList<>();
         for (Product p : products) {
             if (p.getCategory().equals(Category.FOOD) && p.getMargin() > 0 && promoFood.size() < limit) {
-                promoFood.add(p);
                 promoFood.sort(Comparator.comparingDouble(Product::getMargin));
+                promoFood.add(p);
+
             }
 
         }
