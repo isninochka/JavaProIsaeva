@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class task_2 {
     public static void main(String[] args) throws InterruptedException {
 
-
         Thread factory = new Thread() {
             @Override
             public void run() {
@@ -34,13 +33,11 @@ public class task_2 {
             e.printStackTrace();
         }
 
-
         factory.join();
         System.out.println("---Рабочий день на фабрике закончился---");
 
 
     }
-
 }
 
 class Table {
@@ -52,8 +49,6 @@ class Table {
     }
 
     public synchronized void putPats() {
-
-
         while (isPatsOnTable) {
 
             try {
@@ -65,12 +60,9 @@ class Table {
         System.out.println("и несу на стол... ");
         isPatsOnTable = true;
         notify();
-
-
     }
 
     public synchronized void takePats() {
-
         while (!isPatsOnTable) {
             try {
 
@@ -82,14 +74,11 @@ class Table {
         System.out.println("и несу на обработку...");
         isPatsOnTable = false;
         notify();
-
-
     }
 }
 
 class Robot1 extends Thread {
     private final int quantityPats;
-
     Table table;
 
     public Robot1(int quantityPats, Table table) {
