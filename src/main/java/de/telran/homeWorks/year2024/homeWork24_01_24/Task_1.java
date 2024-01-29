@@ -8,7 +8,7 @@ import java.util.Scanner;
 //        нумеруете их и запускаете на выполнение. Каждый поток должен выводить свой номер на экран 100 раз с интервалом 100
 //        миллисекунд перед каждым выводом. Сделайте так, чтобы главный поток выполнения программы не завершился до окончания
 //        работы всех дочерних потоков.
-public class task_1 {
+public class Task_1 {
     @SneakyThrows
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

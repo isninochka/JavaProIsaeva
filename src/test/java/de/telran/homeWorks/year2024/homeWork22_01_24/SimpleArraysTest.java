@@ -2,6 +2,8 @@ package de.telran.homeWorks.year2024.homeWork22_01_24;
 
 import org.junit.jupiter.api.*;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 class SimpleArraysTest {
     private final int[] arr1 = {1, 2, 5, 5, 8, 9, 7, 10};
     private final int[] arr2 = {1, 0, 6, 15, 6, 4, 7, 0};
@@ -35,12 +37,14 @@ class SimpleArraysTest {
     void sameElFinder() {
         expArrVal = new int[]{1, 7};
         actualArrVal = arrays.sameElFinder(arr1,arr2);
+        assertEquals(expArrVal,actualArrVal);
     }
 
     @Test
     void deleteSameEl() {
         expArrVal = new int[]{1, 2, 5, 8, 9, 7, 10};
         actualArrVal = arrays.deleteSameEl(arr1);
+        assertEquals(expArrVal,actualArrVal);
 
     }
 
@@ -48,6 +52,7 @@ class SimpleArraysTest {
     void secondMaxEl() {
         expVal = 4;
         actualVal = arrays.secondMaxEl(arr2);
+        assertEquals(expVal,actualVal);
 
     }
 
@@ -55,5 +60,6 @@ class SimpleArraysTest {
     void secondMinEl() {
         expVal = 4;
         actualVal = arrays.secondMinEl(arr2);
+        assertEquals(expVal,actualVal);
     }
 }
