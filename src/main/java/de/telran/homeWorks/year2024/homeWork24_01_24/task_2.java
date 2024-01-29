@@ -58,13 +58,11 @@ class Table {
 
             try {
                 wait();
-                System.out.println("и несу на стол... ");
-
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-
+        System.out.println("и несу на стол... ");
         isPatsOnTable = true;
         notify();
 
@@ -75,13 +73,13 @@ class Table {
 
         while (!isPatsOnTable) {
             try {
-                System.out.println("и несу на обработку...");
+
                 wait();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-
+        System.out.println("и несу на обработку...");
         isPatsOnTable = false;
         notify();
 
