@@ -1,6 +1,4 @@
 package de.telran.homeWorks.year2024.homeWork26_01_24;
-import lombok.Getter;
-
 import java.util.Scanner;
 
 //Есть Магазин, на котором может одновременно разместиться ограниченное количество товара (для примера
@@ -34,6 +32,7 @@ public class Task2_Shop {
         buyer2.start();
         buyer3.start();
 
+// программа не зацикливается, вроде все работает, но до закрытия магазина так и не доходит.
 
         try {
             supplier2.join();
@@ -52,7 +51,7 @@ public class Task2_Shop {
     }
 }
 class Store{
-    @Getter
+
     private int quantity;
     private int products =0;
 
@@ -64,7 +63,7 @@ class Store{
         this.quantity = quantity;
     }
 
-    public  synchronized void delivery(int quantity){
+    public  synchronized void delivery(){
 
             while (products > quantity) {
                 try {
@@ -79,7 +78,7 @@ class Store{
             notify();
 
     }
-    public synchronized void buy(int quantity){
+    public synchronized void buy(){
 
             while (products <= quantity) {
                 try {
@@ -109,7 +108,7 @@ class Supplier implements Runnable{
     @Override
     public void run() {
         while (true){
-            store.delivery(store.getQuantity());
+            store.delivery();
         }
     }
 }
@@ -124,7 +123,7 @@ class Buyer implements Runnable{
     @Override
     public void run() {
         while (true){
-            store.buy(store.getQuantity());
+            store.buy();
         }
     }
 }
