@@ -35,7 +35,7 @@ enum Action {
     SCISSORS;
 
     private static final Random random = new Random();
-    public static Action randomAction(){
+    public static Action randomAction(int numGames){
         Action[] actions = values();
         return actions[random.nextInt(actions.length)];
     }
