@@ -15,6 +15,7 @@ public class Car {
     @Setter
     private double fuel = 0;
 
+
     public Car(CarType carType, Engine engine, Transmission transmission, int seats, TripComputer tripComputer, GPSNavigator gpsNavigator) {
         this.carType = carType;
         this.engine = engine;

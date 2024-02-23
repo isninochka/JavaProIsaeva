@@ -3,6 +3,7 @@ package de.telran.praktika.praktika23_02_24.cars;
 import de.telran.praktika.praktika23_02_24.cars.builders.CarBuilder;
 import de.telran.praktika.praktika23_02_24.cars.builders.CarManualBuilder;
 import de.telran.praktika.praktika23_02_24.cars.car.Car;
+import de.telran.praktika.praktika23_02_24.cars.car.CarWithoutTC;
 import de.telran.praktika.praktika23_02_24.cars.car.ManualCar;
 import de.telran.praktika.praktika23_02_24.cars.director.Director;
 
@@ -18,6 +19,15 @@ public class CarDemo {
         director.cityCar(manualBuilder);
         ManualCar manualCar = manualBuilder.getCar();
         System.out.println("ManualCar was build"+manualCar);
+
+
+
+        director.cityCarWithoutTC(builder);
+        CarWithoutTC carWithoutTC = builder.getCarWithoutTC();
+        System.out.println(carWithoutTC);
+
+
+
 
 
     }

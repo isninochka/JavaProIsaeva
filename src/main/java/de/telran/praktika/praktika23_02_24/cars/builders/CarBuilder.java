@@ -2,9 +2,10 @@ package de.telran.praktika.praktika23_02_24.cars.builders;
 
 import de.telran.praktika.praktika23_02_24.cars.car.Car;
 import de.telran.praktika.praktika23_02_24.cars.car.CarType;
+import de.telran.praktika.praktika23_02_24.cars.car.CarWithoutTC;
 import de.telran.praktika.praktika23_02_24.cars.components.*;
 
-public class CarBuilder implements Builder{
+public class CarBuilder implements Builder, BuildertWithoutTC{
     private CarType carType;
     private Engine engine;
     private Transmission transmission;
@@ -48,6 +49,9 @@ public class CarBuilder implements Builder{
     public void setGPSNavigator(GPSNavigator gpsNavigator) {
         this.gpsNavigator = gpsNavigator;
 
+    }
+    public CarWithoutTC getCarWithoutTC(){
+        return new CarWithoutTC(carType,engine,transmission,seats,gpsNavigator);
     }
 
     public Car getCar(){

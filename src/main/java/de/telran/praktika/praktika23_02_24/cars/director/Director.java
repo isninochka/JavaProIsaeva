@@ -1,6 +1,7 @@
 package de.telran.praktika.praktika23_02_24.cars.director;
 
 import de.telran.praktika.praktika23_02_24.cars.builders.Builder;
+import de.telran.praktika.praktika23_02_24.cars.builders.BuildertWithoutTC;
 import de.telran.praktika.praktika23_02_24.cars.car.CarType;
 import de.telran.praktika.praktika23_02_24.cars.components.Engine;
 import de.telran.praktika.praktika23_02_24.cars.components.GPSNavigator;
@@ -40,5 +41,13 @@ public class Director {
         builder.setTripComputer(new TripComputer());
         builder.setGPSNavigator(new GPSNavigator());
     }
+    public void cityCarWithoutTC(BuildertWithoutTC builder){
+        builder.setCarType(CarType.CITY_CAR);
+        builder.setEngine(new Engine(1.2,500));
+        builder.setSeats(5);
+        builder.setTransmission(Transmission.ROBOT);
+        builder.setGPSNavigator(new GPSNavigator());
+    }
+
 
 }
