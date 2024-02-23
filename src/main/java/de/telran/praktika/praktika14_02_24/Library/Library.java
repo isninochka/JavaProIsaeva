@@ -14,7 +14,22 @@ public class Library {
 
     public void addBook(Book book){
         books.add(book);
-        System.out.println("Книга добавлена в библиотеку");
+        System.out.println("Книга добавлена в библиотеку"+book.getTitle());
     }
-    
+    public void removeBook(Book book){
+        if(books.contains(book)){
+            books.remove(book);
+            System.out.println("Книгу взяли из библиотеки"+book.getTitle());
+        } else {
+            System.out.println("Такой книги у нас нет");
+        }
+    }
+
+    public void registerUser(User user) {
+        if (users.contains(user)) {
+            System.out.println("Данный пользователь уже существует" + user.getName());
+        } else {
+            users.add(user);
+        }
+    }
 }

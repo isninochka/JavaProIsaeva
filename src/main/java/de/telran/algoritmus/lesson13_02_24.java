@@ -133,7 +133,59 @@ class Train {
         return -1;
     }
 
+    public void deleteLastWagon() {
+        Wagon current = this.root;
+        if (current.next == null)
+            throw new Error(
+                    "You can't remove a wagon from a train that has only one wagon"
+            );
+
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next =null;
+
     }
+
+    public void addWagonAfterNumber(int wagonNumber, int value) {
+        if(wagonNumber > this.wagonCounter())
+            throw new Error("we don't have enough wagons");
+        if (wagonNumber <= 0) throw new Error("the index should be positive");
+        Wagon current = this.root;
+        for (int i = 1; i < wagonNumber ; i++) {
+            current = current.next;
+
+        }
+           Wagon wagon = new Wagon(value);
+            wagon.next = current.next;
+            current.next = wagon;
+        }
+    public void deleteWagonNumber(int wagonNumber) {
+        if(wagonNumber > this.wagonCounter())
+            throw new Error("we don't have enough wagons");
+        if (wagonNumber <= 0) throw new Error("the index should be positive");
+        Wagon current = this.root;
+        for (int i = 1; i < wagonNumber ; i++) {
+            current = current.next;
+
+        }
+        current.next = current.next.next;
+
+
+    }
+
+    public void addFirstWagon( int value) {
+        Wagon firstWagon = new Wagon(value);
+        firstWagon.next = this.root;
+        this.root = firstWagon;
+    }
+
+    }
+
+
+
+
+
 
 
 
@@ -151,15 +203,27 @@ class Wagon {
 class Main {
     public static void main(String[] args) {
         Train train = new Train(10);
-        System.out.println(train.root.next);
+        //System.out.println(train.root.next);
         train.addWagon(20);
         train.addWagon(30);
         train.addWagon(40);
-        System.out.println(train.root.next.next.next.value);
+        //System.out.println(train.root.next.next.next.value);
         System.out.println(train.wagonCounter());
-        System.out.println(train.findValue(40));
-        System.out.println(train.findWagonNumber(40));
+        //System.out.println(train.findValue(40));
+       //System.out.println(train.findWagonNumber(40));
+        train.deleteLastWagon();
+        System.out.println(train.wagonCounter());
+        train.addWagonAfterNumber(2,15);
+        System.out.println(train.wagonCounter());
+        train.deleteWagonNumber(3);
+        System.out.println(train.wagonCounter());
+        train.addFirstWagon(37);
+        System.out.println(train.root.value);
+        System.out.println(train.wagonCounter());
+
+
     }
+
 
 
 }

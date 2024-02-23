@@ -1,10 +1,13 @@
 package de.telran.praktika.praktika14_02_24.Library;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
 import java.util.List;
 @Data
+@NoArgsConstructor
+
 public class User {
 
     private String name;
@@ -34,6 +37,8 @@ public class User {
         }
     }
 
-
-
+    public User(String name, int id) {
+        this.name = name;
+        this.id = id;
+    }
 }
