@@ -24,4 +24,16 @@ public class Car {
         this.gpsNavigator = gpsNavigator;
     }
 
+    @Override
+    public String toString() {
+        return "Car{" +
+                "carType=" + carType +
+                ", engine=" + engine +
+                ", transmission=" + transmission +
+                ", seats=" + seats +
+                ", tripComputer=" + tripComputer +
+                ", gpsNavigator=" + gpsNavigator +
+                ", fuel=" + fuel +
+                '}';
+    }
 }
