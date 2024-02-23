@@ -1,6 +1,7 @@
 package de.telran.praktika.praktika23_02_24.cars.builders;
 
 
+import de.telran.praktika.praktika23_02_24.cars.car.CarType;
 import de.telran.praktika.praktika23_02_24.cars.components.*;
 
 public interface Builder {

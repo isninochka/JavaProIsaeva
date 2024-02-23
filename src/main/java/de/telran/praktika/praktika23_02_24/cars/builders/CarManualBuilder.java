@@ -2,17 +2,16 @@ package de.telran.praktika.praktika23_02_24.cars.builders;
 
 import de.telran.praktika.praktika23_02_24.cars.car.Car;
 import de.telran.praktika.praktika23_02_24.cars.car.CarType;
+import de.telran.praktika.praktika23_02_24.cars.car.ManualCar;
 import de.telran.praktika.praktika23_02_24.cars.components.*;
 
-public class CarBuilder implements Builder{
+public class CarManualBuilder implements Builder{
     private CarType carType;
     private Engine engine;
     private Transmission transmission;
     private int seats;
     private TripComputer tripComputer;
     private GPSNavigator gpsNavigator;
-
-
 
     @Override
     public void setCarType(CarType carType) {
@@ -50,7 +49,7 @@ public class CarBuilder implements Builder{
 
     }
 
-    public Car getCar(){
-        return new Car(carType,engine,transmission,seats,tripComputer,gpsNavigator);
+    public ManualCar getCar(){
+        return new ManualCar(carType,engine,transmission,seats,tripComputer,gpsNavigator);
     }
 }

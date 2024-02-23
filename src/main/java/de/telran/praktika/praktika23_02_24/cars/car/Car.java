@@ -1,4 +1,4 @@
-package de.telran.praktika.praktika23_02_24.cars;
+package de.telran.praktika.praktika23_02_24.cars.car;
 
 import de.telran.praktika.praktika23_02_24.cars.components.*;
 import lombok.Getter;

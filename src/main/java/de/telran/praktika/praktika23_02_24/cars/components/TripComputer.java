@@ -1,7 +1,6 @@
 package de.telran.praktika.praktika23_02_24.cars.components;
 
-import de.telran.praktika.praktika23_02_24.cars.Car;
-import lombok.Setter;
+import de.telran.praktika.praktika23_02_24.cars.car.Car;
 
 
 public class TripComputer {
