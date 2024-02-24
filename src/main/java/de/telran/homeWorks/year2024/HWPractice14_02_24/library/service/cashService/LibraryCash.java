@@ -1,14 +1,16 @@
 package de.telran.homeWorks.year2024.HWPractice14_02_24.library.service.cashService;
 
-
+import de.telran.homeWorks.year2024.HWPractice14_02_24.library.data.dto.Book;
 import de.telran.homeWorks.year2024.HWPractice14_02_24.library.data.dto.User;
 
-import java.util.Map;
+public interface LibraryCash {
 
-import static de.telran.homeWorks.year2024.HWPractice14_02_24.library.service.cashService.BooksMap.books;
+    void addBookToLibrary(Book book);
+    void removeBookLibrary(Book book);
+    void addUserToLibrary(User user);
 
-public abstract class LibraryCash {
-    private User user;
+    void addBookToUser(Book book, User user);
+    void removeBookFromUser(Book book, User user);
 
 
 }
