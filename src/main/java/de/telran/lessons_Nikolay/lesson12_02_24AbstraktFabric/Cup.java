@@ -1,4 +1,4 @@
-package de.telran.lessons_Temnyakov.lesson12_02_24AbstraktFabric;
+package de.telran.lessons_Nikolay.lesson12_02_24AbstraktFabric;
 
 interface Cup {
     void keep();

@@ -1,4 +1,4 @@
-package de.telran.lessons_Temnyakov.lesson14_02_24Pattern.Builder;
+package de.telran.lessons_Nikolay.lesson14_02_24Pattern.Builder;
 
 public  abstract class Builder {
     public abstract void buildPartA();

@@ -1,6 +1,4 @@
-package de.telran.lessons_Temnyakov.lesson14_02_24Pattern.Builder;
-
-import de.telran.lessons_Temnyakov.lesson14_02_24Pattern.Builder.Builder;
+package de.telran.lessons_Nikolay.lesson14_02_24Pattern.Builder;
 
 public class Director {
     private Builder builder;
