@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class lesson06_02_24 {
+public class Lesson06_02_24 {
     public static void main(String[] args) {
         int[] array = {6, 7, 1, 2, 9, 8, 3, 0, 10, 5};
         quickSort(array,0,array.length-1);

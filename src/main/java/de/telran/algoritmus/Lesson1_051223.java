@@ -1,6 +1,6 @@
 package de.telran.algoritmus;
 
-public class lesson1_051223 {
+public class Lesson1_051223 {
     public static int maxEl(int[]array){
         int max= array[0];
         for (int i = 0; i < array.length; i++) {

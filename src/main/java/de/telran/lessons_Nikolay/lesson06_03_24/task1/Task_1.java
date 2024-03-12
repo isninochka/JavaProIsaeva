@@ -1,4 +1,4 @@
-package de.telran.lessons_Nikolay.lesson06_03_24;
+package de.telran.lessons_Nikolay.lesson06_03_24.task1;
 
 import java.util.Arrays;
 import java.util.Map;

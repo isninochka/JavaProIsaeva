@@ -1,6 +1,6 @@
 package de.telran.algoritmus;
 
-public class lesson09_01_24 {
+public class Lesson09_01_24 {
     public static void main(String[] args) {
 
     }
